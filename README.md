@@ -15,7 +15,7 @@ git clone https://github.com/4rhd6gh/TodoList.git
 npm install
 ```
 
-추가된 라이브러리
+추가된 라이브러리.
 
 <img src="https://img.shields.io/badge/redux-devtools-extension-7A1FA2?style=flat-square"/> 크롬 확장 프로그램에서 redux dev tools를 통해 설치 할 수 있고, redux의 데이터 흐름을 알아보기 쉽게 하기 위해 사용
 
