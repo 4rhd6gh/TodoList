@@ -15,18 +15,50 @@ git clone https://github.com/4rhd6gh/TodoList.git
 npm install
 ```
 
-추가된 라이브러리.
+## 추가된 라이브러리
 
-<img src="https://img.shields.io/badge/redux-devtools-extension-7A1FA2?style=flat-square"/> 크롬 확장 프로그램에서 redux dev tools를 통해 설치 할 수 있고, redux의 데이터 흐름을 알아보기 쉽게 하기 위해 사용
+<img src="https://img.shields.io/badge/redux--devtools--extension-2.13.9-7A1FA2?style=flat-square"/> 크롬 확장 프로그램에서 redux dev tools를 통해 설치 할 수 있고, redux의 데이터 흐름을 알아보기 쉽게 하기 위해 사용
 
-<img src="https://img.shields.io/badge/redux-logger-7A1FA2?style=flat-square"/> redux를 통해 바뀔 이전 state, dispatch 실행으로 인해 바뀐 state가 콘솔에 찍혀 디버깅 쉽게 해주는 라이브러리
+<img src="https://img.shields.io/badge/redux--logger-3.0.6-7A1FA2?style=flat-square"/> redux를 통해 바뀔 이전 state, dispatch 실행으로 인해 바뀐 state가 콘솔에 찍혀 디버깅 쉽게 해주는 라이브러리
 
-<img src="https://img.shields.io/badge/react-router-dom-7A1FA2?style=flat-square"/> 라우팅을 도와주는 라이브러리
+<img src="https://img.shields.io/badge/react--router--dom-6.3.0-7A1FA2?style=flat-square"/> 라우팅을 도와주는 라이브러리
 
-<img src="https://img.shields.io/badge/axios-7A1FA2?style=flat-square"/> 서버 통신을 할 수 있게 해주는 라이브러리
+<img src="https://img.shields.io/badge/axios-0.26.1-7A1FA2?style=flat-square"/> 서버 통신을 할 수 있게 해주는 라이브러리
 
-시작 스크립트
+## 시작 스크립트
 
 ```bash
 npm run start
+```
+
+## 라우팅 설정
+
+path에 있는 url로 접근하시면 자신의 폴더에서 개발한 내용이 나옵니다.
+
+```javascript
+<Router>
+  <Routes>
+    <Route path="/" element={<Main />} />
+    <Route path="/byungsu" element={<Byungsu />} />
+    <Route path="/jihuk" element={<Jihyuk />} />
+    <Route path="/suna" element={<Suna />} />
+    <Route path="/jinho" element={<Jinho />} />
+  </Routes>
+</Router>
+```
+
+## 폴더 설정
+
+초기 index.js는 삭제하시고 자신의 폴더 안에 하위폴더 구조도 잡으시면서 컴포넌트를 나눠서 개발하시면 될듯합니다.
+
+```bash
+├── src
+│   ├── pages
+│   │   ├── byungsu
+│   │   ├── jihyuk
+│   │   ├── jinho
+│   │   └── suna
+│   └── useRedux
+│       └── rootReducer.js
+└── App.js
 ```
