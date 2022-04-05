@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Main from "./pages/Main.js";
 import Jihyuk from "./pages/jihyuk";
-import Sunah from "./pages/sunah";
+import Sunah from "./pages/sunah/pages";
 import Byungsu from "./pages/byungsu";
 import Jinho from "./pages/jinho";
 
