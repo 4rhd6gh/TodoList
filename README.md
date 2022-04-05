@@ -1,4 +1,3 @@
-
 # TodoList
 
 # Todo 프로젝트 협업 github 활용 연습
@@ -44,7 +43,7 @@ path에 있는 url로 접근하시면 자신의 폴더에서 개발한 내용이
     <Route path="/" element={<Main />} />
     <Route path="/byungsu" element={<Byungsu />} />
     <Route path="/jihuk" element={<Jihyuk />} />
-    <Route path="/suna" element={<Suna />} />
+    <Route path="/sunah" element={<Sunah />} />
     <Route path="/jinho" element={<Jinho />} />
   </Routes>
 </Router>
@@ -60,7 +59,7 @@ path에 있는 url로 접근하시면 자신의 폴더에서 개발한 내용이
 │   │   ├── byungsu
 │   │   ├── jihyuk
 │   │   ├── jinho
-│   │   └── suna
+│   │   └── sunah
 │   └── useRedux
 │       └── rootReducer.js
 └── App.js
