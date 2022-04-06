@@ -42,7 +42,7 @@ path에 있는 url로 접근하시면 자신의 폴더에서 개발한 내용이
   <Routes>
     <Route path="/" element={<Main />} />
     <Route path="/byungsu" element={<Byungsu />} />
-    <Route path="/jihuk" element={<Jihyuk />} />
+    <Route path="/jihyuk" element={<Jihyuk />} />
     <Route path="/sunah" element={<Sunah />} />
     <Route path="/jinho" element={<Jinho />} />
   </Routes>
