@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { useTodoState } from "../TodoContext";
 
 const TodoDateBlock = styled.div`
   h1 {
@@ -27,8 +26,7 @@ const TasksLeft = styled.div`
   font-weight: bold;
 `;
 
-const TodoHead = () => {
-  const todos = useTodoState();
+const TodoHead = ({ todos }) => {
   const undoneTask = todos.filter((todo) => !todo.done).length;
 
   const date = new Date();

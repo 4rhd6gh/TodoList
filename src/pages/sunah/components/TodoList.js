@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import TodoItem from "./TodoItem";
-import { useTodoState } from "../TodoContext";
 
 const TodoListBlock = styled.div`
   flex: 1; /*영역 전체 차지*/
@@ -10,8 +9,7 @@ const TodoListBlock = styled.div`
   overflow-y: auto;
 `;
 
-const TodoList = () => {
-  const todos = useTodoState();
+const TodoList = ({ todos, onRemove, onEdit, onToggle }) => {
   return (
     <TodoListBlock>
       {todos.map((todo) => (
@@ -20,10 +18,13 @@ const TodoList = () => {
           id={todo.id}
           done={todo.done}
           text={todo.text}
+          onRemove={onRemove}
+          onEdit={onEdit}
+          onToggle={onToggle}
         />
       ))}
     </TodoListBlock>
   );
 };
 
-export default TodoList;
+export default React.memo(TodoList);

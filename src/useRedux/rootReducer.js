@@ -1,5 +1,7 @@
 import { combineReducers } from "redux";
-
-const rootReducer = combineReducers({});
+import todos from "../pages/sunah/modules/todos";
+const rootReducer = combineReducers({
+  todos,
+});
 
 export default rootReducer;
