@@ -1,10 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import TodoTemplate from "../components/TodoTemplate";
-import TodoHead from "../components/TodoHead";
-import TodoCreate from "../components/TodoCreate";
-import TodoList from "../components/TodoList";
-import { TodoProvider } from "../TodoContext";
 
+import TodosContainer from "../containers/TodosContainer";
 const GlobalStyle = createGlobalStyle`
   body{
     background: #e9ecef;
@@ -13,14 +9,10 @@ const GlobalStyle = createGlobalStyle`
 
 const Sunah = () => {
   return (
-    <TodoProvider>
+    <div>
       <GlobalStyle />
-      <TodoTemplate>
-        <TodoHead />
-        <TodoList />
-        <TodoCreate />
-      </TodoTemplate>
-    </TodoProvider>
+      <TodosContainer />
+    </div>
   );
 };
 
