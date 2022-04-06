@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { MdDone, MdDelete } from "react-icons/md";
-
+import { useDispatch } from "react-redux";
+import { remove, edit, toggle } from "../modules/todos";
 const Remove = styled.div`
   display: flex;
   align-items: center;
@@ -59,7 +60,12 @@ const Input = styled.input`
     `}
 `;
 
-const TodoItem = ({ id, done, text, onRemove, onEdit, onToggle }) => {
+const TodoItem = ({ id, done, text }) => {
+  const dispatch = useDispatch();
+  const onRemove = (id) => dispatch(remove(id));
+  const onEdit = (id, text) => dispatch(edit(id, text));
+  const onToggle = (id) => dispatch(toggle(id));
+
   const [value, setValue] = useState(text);
   const onChange = (e) => setValue(e.target.value);
   const onSubmit = (e) => {

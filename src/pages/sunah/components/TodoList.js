@@ -9,7 +9,7 @@ const TodoListBlock = styled.div`
   overflow-y: auto;
 `;
 
-const TodoList = ({ todos, onRemove, onEdit, onToggle }) => {
+const TodoList = ({ todos }) => {
   return (
     <TodoListBlock>
       {todos.map((todo) => (
@@ -18,9 +18,6 @@ const TodoList = ({ todos, onRemove, onEdit, onToggle }) => {
           id={todo.id}
           done={todo.done}
           text={todo.text}
-          onRemove={onRemove}
-          onEdit={onEdit}
-          onToggle={onToggle}
         />
       ))}
     </TodoListBlock>

@@ -11,19 +11,11 @@ function TodosContainer() {
   const dispatch = useDispatch();
 
   const onCreate = (text) => dispatch(create(text));
-  const onRemove = (id) => dispatch(remove(id));
-  const onEdit = (id, text) => dispatch(edit(id, text));
-  const onToggle = (id) => dispatch(toggle(id));
 
   return (
     <TodoTemplate>
       <TodoHead todos={todos} />
-      <TodoList
-        todos={todos}
-        onRemove={onRemove}
-        onEdit={onEdit}
-        onToggle={onToggle}
-      />
+      <TodoList todos={todos} />
       <TodoCreate onCreate={onCreate} />
     </TodoTemplate>
   );
