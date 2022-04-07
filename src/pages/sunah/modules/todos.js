@@ -9,6 +9,7 @@ export const create = (text) => ({
   todo: {
     id: todoId++, // 새 항목을 추가하고 nextId 값에 1을 더해줍니다.
     text,
+    done: false,
   },
 });
 
@@ -29,6 +30,12 @@ export const toggle = (id) => ({
   type: TOGGLE,
   id,
 });
+
+export const createAsync = (text) => {
+  return function f(dispatch) {
+    setTimeout(() => dispatch(create(text)), 3000);
+  };
+};
 
 const initialTodos = [
   // {
@@ -51,8 +58,6 @@ const initialTodos = [
 export default function todos(state = initialTodos, action) {
   switch (action.type) {
     case CREATE:
-      console.log("!!");
-      console.log(state.concat(action.todo));
       return state.concat(action.todo);
     case TOGGLE:
       return state.map((todo) =>
